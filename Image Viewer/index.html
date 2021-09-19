@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel = "stylesheet", type = "text/css", href = "style.css"/>
+        <link rel = "javascript", type = "text/javascript", href = "js/Uploader.js"/>
+        <title>Online Image Viewer Demo</title>
+    </head>
+    <body>
+        <noscript>
+            <strong>Sorry, It doesnt work without javascript. Try again after javascript enabled.</strong>
+        </noscript>
+        <input type = "file", accept = "image/*", id = "filebrowser", style = "display: none"/>
+
+
+        <div id = "dropuploader", ondragover = "onDragOver(event)">
+            <span>Drop to upload</span>
+        </div>
+
+        <div class = "UploadButton", id = "uploadbutton">
+            <ion-icon name="cloud-upload"/>
+        </div>
+
+        <img id = "imagedisplay"/>
+    </body>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+    <script src = "js/Uploader.js"></script>
+    <script>
+        function onDragOver (event) {
+            event.preventDefault();
+        }
+    </script>
+</html>
